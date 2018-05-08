@@ -101,11 +101,6 @@ function! s:Init(silent) abort
         call s:InitTypes()
     endif
 
-    if !s:autocommands_done
-        call s:CreateAutocommands()
-        call s:AutoUpdate(fnamemodify(expand('%'), ':p'), 0)
-    endif
-
     let s:init_done = 1
     return 1
 endfunction
